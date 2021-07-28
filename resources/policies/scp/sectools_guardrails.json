@@ -1,0 +1,71 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RESTRICTSECURITYHUBDISABLE",
+      "Effect": "Deny",
+      "Action": [
+        "securityhub:DeleteInvitations",
+        "securityhub:DisableSecurityHub",
+        "securityhub:DisassociateFromMasterAccount",
+        "securityhub:DeleteMembers",
+        "securityhub:DisassociateMembers"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "GESTRICTGUARDDUTYDISABLE",
+      "Effect": "Deny",
+      "Action": [
+        "guardduty:DeleteDetector",
+        "guardduty:DeleteInvitations",
+        "guardduty:DeleteIPSet",
+        "guardduty:DeleteMembers",
+        "guardduty:DeleteThreatIntelSet",
+        "guardduty:DisassociateFromMasterAccount",
+        "guardduty:DisassociateMembers",
+        "guardduty:StopMonitoringMembers"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "RESTRICTDETECTIVEDISABLE",
+      "Effect": "Deny",
+      "Action": [
+        "detective:DisassociateMembership"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "RESTRICTCONFIGDISABLE",
+      "Effect": "Deny",
+      "Action": [
+        "config:DeleteAggregationAuthorization",
+        "config:DeleteConfigRule",
+        "config:DeleteConfigurationRecorder",
+        "config:DeleteDeliveryChannel",
+        "config:StopConfigurationRecorder"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "RESTRICTCLOUDTRAILDISABLE",
+      "Effect": "Deny",
+      "Action": [
+        "cloudtrail:StopLogging"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
+

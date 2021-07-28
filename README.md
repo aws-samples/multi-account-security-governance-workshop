@@ -1,11 +1,6 @@
-## My Project
+## Multi-account Security Governance Workshop Artifacts
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+Artifacts to support the multi-account security governance workshop. This workshop is designed to help you get familiar with a common pattern for centralized security governance across a multi-account AWS deployment. You will be working with AWS Organizations to establish security guardrails (preventive and detective) and enable centrally managed security services for detection/logging/visibility.
 
 ## Security
 
