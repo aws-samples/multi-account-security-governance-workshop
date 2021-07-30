@@ -49,7 +49,7 @@ function create_account() {
     then
             new_acct_email=$(sed 's/@/-'"$email_append"'&/' <<< "$email")
     else
-            new_acct_email=$(sed 's/@/-'"$email_append"'&/' <<< "$email")
+            new_acct_email=$(sed 's/@/+'"$email_append"'&/' <<< "$email")
     fi 
 
     request_id=$(aws organizations create-account \
