@@ -138,7 +138,7 @@ function main() {
     printf "Checking if organization exists ...\n"
 
     org_id=$(aws organizations describe-organization \
-        --query Organization.Id \
+        --query 'Organization.[Id]' \
         --output text 2>/dev/null)
 
     if [ $? != 0 ]; then
